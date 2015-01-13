@@ -1,0 +1,55 @@
+<html>
+<head>
+	<title> my first javascript program</title>
+	<script>
+		function foo()
+		{
+			alert("welcome to js programming");
+			
+			var a=12;
+			alert(typeof(a));
+
+			var b="web theory";
+			//alert(b);
+			alert(a+b);//12webtheory	
+
+			var c=true;
+			//alert(c);
+
+			//undefined variable d bcos its not initialized
+			var d;
+			//alert(typeof(d));
+
+			var e=null;
+			//alert(typeof(e)); displays object
+		}
+
+		//demonstrating prompt and write in js
+		function foo1()
+		{
+			var g=window.prompt("enter the string","default_value");
+			document.write(g);
+		}
+
+
+		//demonstrating dialog boxes
+		function foo2()
+		{
+			var status=window.confirm("are you sure?");
+			if(status)
+				alert("ok");
+			else
+				alert("cancel");
+		}
+	</script>
+</head>
+
+
+<body>
+	<input type="button" value="do_the_task" onclick="foo();" /><br>
+	<input type="button" value="prompt_write" onclick="foo1();" /><br>
+	<input type="button" value="dialog_boxes" onclick="foo2();" />
+
+</body>
+</html>
+
