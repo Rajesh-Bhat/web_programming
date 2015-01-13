@@ -1,0 +1,12 @@
+script tag in head :
+
+whatever we write in head tag is not rendered.
+script tags are handled by js interpreter
+
+
+data types in js:
+number
+string
+undefined
+boolean
+null
