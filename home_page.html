@@ -1,0 +1,148 @@
+<html>
+
+	<head>
+
+        <script>
+
+        function post()
+        {
+            var username=$('#username').val();
+            var password=$('#password').val();
+            
+
+        }
+
+        function f()
+        {
+           
+            document.getElementById('fade').style.display = 'block';
+            document.getElementById('light').style.display = 'block';
+
+        }
+
+        //called when the cancel button is pressed in the popup appeared after clicking answer button
+        function cancel()
+        {
+            
+            document.getElementById('fade').style.display = 'none';
+            document.getElementById('light').style.display = 'none';
+
+        }
+
+        </script>
+
+        <style>
+            .emblem
+            {
+                float:left;
+                padding:18px 20px 0px 0px;
+                border-right:1px solid #EBEBEB;
+            }
+
+            .logo
+            {
+                float:left;
+                padding:21px 0px 0px 10px;
+
+            }
+            .container
+            {
+                padding:0px 200px 0px 200px;
+
+            }
+
+            .login
+            {
+                padding:30px 20px 0px 30px;
+                float:left;
+
+            }
+            h3
+            {
+                float: left;
+                padding:31px 50px 0px 50px;
+            }
+
+
+
+            .black_overlay{
+                display: none;
+                position: fixed;
+                top: 0%;
+                left: 0%;
+                width: 100%;
+                height: 100%;
+                background-color: black;
+                z-index:1001;
+                -moz-opacity: 0.8;
+                opacity:.80;
+                filter: alpha(opacity=80);
+            }
+            .white_content {
+                display: none;
+                position:fixed;
+                top: 25%;
+                left: 25%;
+                width: 50%;
+                height: 50%;
+                padding: 16px;
+                border: 10px solid pink;
+                background-color: white;
+                z-index:1002;
+                overflow: auto;
+            }
+        </style>
+
+	</head>
+
+
+	<body>
+		 <section class="top-wrapper">
+            <div class="container">
+                <div class="top-left">
+                    <div class="emblem">
+                        <img src="./static/emblem.png" >
+                    </div>
+                    <div class="logo">
+                        <img src="./static/logo.png" >
+                    </div>    
+                 
+                </div>
+                <div class="top-right">
+					<h3> IDEA CROWD-SOURCING PLATFORM</h3>
+                    
+                     <div class="login">
+                        <img src="./static/login.png">
+
+                        <a href = "javascript:void(0)" onclick = "f();">Sign In</a><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="" > signup </a>
+                    </div>
+                    
+                </div>
+
+               
+
+
+                    <!-- popup of signin-->
+                    <div id="light" class="white_content"><br>
+                        
+                        <center>
+                            <form id="signinform">Sign in to continue...<br>
+                                Username:<br><input type="text" id="username" width="250%"><br><br>
+                                Password:<br><input type="password" id="password"><br><br>
+                                <input type="button" name="signin" value="SIGN IN" onclick="post();"><br>
+                            </form>
+                            <a href = "javascript:void(0)" onclick ="cancel();">Close</a>
+                        </center> 
+                    
+                    </div>
+                    <div id="fade" class="black_overlay"> 
+            </div>
+        </section>
+        <!--/End Top Wrapper-->
+
+
+	</body>
+</html>
+
