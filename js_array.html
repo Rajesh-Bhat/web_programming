@@ -1,0 +1,112 @@
+<!--array is also an object in js
+ one way of declaring an array
+arr= new Array(); //flexible size
+
+arr= new Array(4); size 4
+other way
+var arr=[1,2,3,4]; -->
+
+<html>
+<head>
+	<title> array examples in js</title>
+
+	<script>
+		//first way of creating array using new operator
+		arr=new Array(4);
+		arr[0]=1;
+		arr[1]=2;
+		arr[2]=3;
+		arr[3]=4;
+
+		//alert(arr);
+
+		arr1=[100,200,300,400];
+		//alert(arr1);
+		
+		//array length
+		//alert("before"+arr1.length);
+
+		//setting length explicitly
+		arr1.length=10;
+		//alert("after"+arr1.length);
+
+		//even string was assingned to the array at 200 index
+		//arr1[200]="rajesh"
+
+		// 100th location was not initialized so undefined will be displayed
+		//alert(arr1[100]);
+
+
+		arr2=[1,3,5,7,9,11,13,15,17,77]
+
+		alert("arr2 contents"+arr2);
+		
+		option=prompt("enter array method")
+
+		switch(option)
+		{
+			case 'join':arr3=arr2.join("-"); // - is separator and the result is stored in different array
+						alert(arr3);
+						break;
+			case 'push':arr2.push(2000); //adds element at the end of the array and modifies the original array
+						alert(arr2);
+						break;
+			case 'pop':arr2.pop();// pops the last element of the original array
+						alert(arr2);
+						break;
+
+			case 'shift':arr2.shift();//deletes element at the beginning of the array
+						alert(arr2);
+						break;
+			
+			case 'unshift':arr2.unshift(1000);// adds the element at the beginningof the array
+						alert(arr2);
+						break;
+
+			case 'reverse' :arr2.reverse(); //reversing the original array
+						alert(arr2);
+						break;
+			
+			case 'splice' :arr2.splice(2,3,5000,6000,7000);//from position 2 adding 3 more elements
+						alert(arr2);
+						break;
+
+			case 'splice1' :arr3=[-1,-2,-3]
+						arr2.splice(2,arr3.length,arr3);//we can specify array also
+						alert(arr2);
+						break;
+
+			case 'splice2' :arr2.splice(2,5);// removes 5 elements from pos 2
+						alert(arr2);
+						break;
+
+
+			case 'splice3' :arr2.splice(-1,1);// removes 5 elements from last pos
+						alert(arr2);
+						break;
+
+
+			case 'slice':arr4=arr2.slice(0,3);
+						alert(arr4)
+						break;
+
+
+
+
+
+		}
+	
+
+
+	</script>
+
+
+
+</head>
+
+
+<body>
+</body>
+
+</html>
+
