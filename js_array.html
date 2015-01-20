@@ -42,6 +42,10 @@ var arr=[1,2,3,4]; -->
 		alert("arr2 contents"+arr2);
 		
 		option=prompt("enter array method")
+		function comp(a,b)
+		{
+			return a-b;
+		}
 
 		switch(option)
 		{
@@ -95,11 +99,33 @@ var arr=[1,2,3,4]; -->
 						alert(arr8);
 						break;
 
+			case 'index':arr9=["a","b","c","d"];
+						 res=arr9.indexOf("c"); 
+						 alert(res);// mismatch it returns -1 or else proper index
+						 break;
 
+			case 'lastindex':arr9=["a","b","c","d","c","e","c"];
+						 res=arr9.lastIndexOf("c",1); 
+						 alert(res);//negative index starts from 
+						 break;	
 
+			//positive val:ascending order
+			//negative val;desc order
+			case 'sort_alpha':arr10=["a","b","c","d","c","e","c"];
+								arr10.sort();
+								alert(arr10);
+								break;
+			case 'sort_string':arr10=["aafdaf","bhdfh","csgd","dfhfh","csfsf","edfsg","c"];
+								arr10.sort();
+								alert(arr10);
+								break;
+			case 'sort_num':arr10=[1,5,3,4,2,-1,-9];
+							arr10.sort(comp);
+							alert(arr10);
+							break;					
+					 
 
-
-		}
+	}
 	
 
 
