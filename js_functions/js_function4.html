@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title> function examples in js</title>
+	<script>
+
+		function myfunc()
+		{
+			var myvar="welcome to js functions";
+			alert(myvar);
+			
+		}
+		
+
+		var webobj= new Object(); // creation of Object
+
+		webobj.subname="web";
+
+		webobj.subcode="12CS353";
+
+		webobj.msg=myfunc; //function is assigned as property to object
+
+		alert("first property is:"+webobj.subname+" second property is:"+webobj.subcode);
+
+		//alert("third property is "+webobj.msg);
+
+		alert("third property is "+webobj.msg());
+
+		webobj.msg();//function is invoked through object
+
+		myfunc(); //calling function independently also works
+
+
+
+	</script>
+</head>
+
+
+</html>	
