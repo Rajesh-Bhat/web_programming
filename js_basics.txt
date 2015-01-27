@@ -10,3 +10,19 @@ string
 undefined
 boolean
 null
+
+window is an object prompt is a method
+DOM:doc object model
+
+-------------------
+cookies:
+its a text file for storing information of client.
+uniquely identify each client.
+belongs to document object.
+three functions:
+encode
+decode
+escape
+
+deleting a cookie:
+set the expires property to past date
