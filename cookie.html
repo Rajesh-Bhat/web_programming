@@ -1,0 +1,43 @@
+<html>
+<head>
+	<title> cookies!!!</title>
+	<script>
+		mystr="name=rajesh";
+		//cookie value is in name value pairs
+		document.cookie=mystr;
+		//alert(document.cookie);	
+
+
+		// here e is not considered as value bcos of ;
+		mystr1="dept=is;e";
+		document.cookie=mystr1;
+		//alert("using ; without escape: "+document.cookie);	
+
+		//special meaning of ; can be removed by using escape function
+		mystr1="dept="+escape("is;e");
+		document.cookie=mystr1;
+		//alert("using escape function: "+document.cookie);	
+
+
+		//special meaning of ; can be removed by using escape function
+		mystr1="dept="+encodeURIComponent("ise department");
+		document.cookie=mystr1;
+		alert("encoded: "+document.cookie);	
+
+		date=new Date(2015,1,28);
+		str="course=web";
+		document.cookie=str+";expires="+date.toString();
+		alert(document.cookie);
+		//can also be done with max-age
+
+
+			
+
+		
+	</script>
+</head>
+
+<body>
+	
+</body>
+</html>
