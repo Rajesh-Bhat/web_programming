@@ -1,0 +1,34 @@
+<html>
+
+
+<head>
+
+	<script>
+
+		function foo(p1,p2,p3)
+		{
+			//alert(this.prop);
+			alert(p1);
+			alert(p2);
+			alert(p3);
+		}
+
+
+		obj=new Object();
+		obj.method=foo;
+		obj.prop="123";
+		a=[1,2,3];
+		//functioname.call(objectname,parameters)
+		//using call function we can invoke function call through obj defined
+		foo.call(obj,a);
+
+		foo.apply(obj,a);
+		
+
+	</script>
+</head>
+
+<body>
+	
+</body>
+</html>
