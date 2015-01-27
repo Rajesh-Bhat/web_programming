@@ -1,0 +1,72 @@
+<html>
+<head>
+	<script>
+		function bounce()
+		{
+				if(newwin.closed)
+				{
+					clearInterval(id);
+					return;
+				}
+				
+				// have we reached right or left
+				if((x+dx > screen.availWidth-w) || (x+dx < 0))
+				{
+					dx=-dx;
+				}
+				
+				//have we reached top or bottom of the edge
+				if((y+dy > screen.availHeight-h) || (y+dy < 0))
+				{
+					dy=-dy;
+				
+				}
+				x+=dx;
+				y+=dy;
+				
+				//finally move the window to the new position
+				
+				newwin.moveTo(x,y)
+			
+		}//end of bounce function
+
+
+		function start()
+		{
+			
+			
+			//window.open("","new_window",'width=20px, height=20px');
+			x=0,y=0,w=200,h=200; //for window position and size
+			
+			dx=5,dy=5;//velocity
+			
+			interval=100; //milli seconds
+			
+			//creating window
+			newwin=window.open('javascript:"<h1>bounce</h1>"',"newwindow","width="+w+", height="+h);
+			// javascript url is simply a way to display short document
+			//set the initial position of the window
+			newwin.moveTo(x,y);
+			
+			//use setInterval function
+			var id=window.setInterval("bounce()",interval);
+			
+			//bounce function moves the window by dx and dy 
+			
+			
+		}
+
+		
+		
+		function stop()
+		{
+			newwin.close();
+		}
+	</script>
+</head>
+
+<body>
+	<input type="button" value="start" onclick="start();">
+	<input type="button" value="stop" onclick="stop();">
+</body>
+</html>
