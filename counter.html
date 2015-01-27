@@ -1,0 +1,40 @@
+<html>
+<head>
+	<script>
+		
+
+		count=0;
+		function start()
+		{
+			//creating window
+			//if var is not specified then its global variable
+			win=window.open("","newwindow","width=400, height=400");
+			writecount();
+		
+		}
+
+		function writecount()
+		{
+			win.document.write("<h2>count:"+count+"</h2>");
+			count++;
+			win.document.close();
+			id=setTimeout(writecount,1000);
+		}
+
+		
+		
+		function stop()
+		{
+			if(id)
+			{
+				clearTimeout(id);
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<input type="button" value="start" onclick="start();">
+	<input type="button" value="stop" onclick="stop();">
+</body>
+</html>
