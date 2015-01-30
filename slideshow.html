@@ -1,0 +1,38 @@
+<html>
+<head>
+	<script>
+		count=3;
+		function loadimg()
+		{
+			if(count >= 0)
+			{			
+				img=document.getElementById("imgid");
+				img.src="images/image0"+count+".jpg";
+				
+				count--;
+			}
+			else
+			{
+				count=3;
+			}	
+			
+		}
+
+		function foo()
+		{
+			
+			setInterval(loadimg,3000);
+		}
+	</script>
+
+</head>
+
+	<body>
+		<center><img id="imgid" src="images/image00.jpg" width="300px" height="300px" alt="no img found">
+		<br>
+			<input type="button" onclick="foo()" value="play">
+			
+		</center>
+	</body>
+
+</html>
