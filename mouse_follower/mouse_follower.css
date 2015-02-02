@@ -1,0 +1,17 @@
+	#stop{
+		position:absolute;
+		bottom: 10%;
+		left:40%;
+
+	}
+	#start{
+		position:absolute;
+		bottom: 10%;
+		left:30%;
+	}
+	div#follower
+	{
+		width:30px;
+		height:30px;
+		background-color:red;
+	}
