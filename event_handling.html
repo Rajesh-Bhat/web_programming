@@ -1,0 +1,41 @@
+<html>
+
+
+<head>
+
+<style>
+	div {border-style:solid;}
+	p {border-style:solid;}
+
+</style>
+<script>
+
+	function init()
+	{	
+		
+		function foo1(){alert("i am paragraph 4");}
+		function foo2(){alert("i am div");}
+		div1=document.getElementById("d1");
+		p1=document.getElementById("p1");
+		p2=document.getElementById("p2");
+		p3=document.getElementById("p3");
+		p4=document.getElementById("p4");
+		p4.addEventListener("click",foo1,true);
+		div1.addEventListener("click",foo2,true);
+		
+	}
+</script>
+<!-- capturing is from parent to child  and bubbling is from child to parent -->
+
+<body onload="init()"><!-- do all event reg on or before loading page -->
+
+	<div id="d1" > I am div
+		<p id="p1">i am 1 paragraph </p>
+		<p id="p2">i am 2 paragraph </p>
+		<p id="p3">i am 3 paragraph </p>
+		<p id="p4">i am 4 paragraph </p>
+	</div>
+
+	
+
+</body>
