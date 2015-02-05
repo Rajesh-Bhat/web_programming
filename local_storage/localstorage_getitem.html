@@ -1,0 +1,33 @@
+<!Doctype html>
+<html>
+
+<head>
+	<script>
+	function foo() {
+    if(typeof(Storage) !== "undefined") {
+
+      /*if(localStorage.getItem('name'))
+       	name=localStorage.getItem('name');
+
+       if(localStorage.getItem('usn'))
+         usn=localStorage.getItem('usn');
+      
+       document.getElementById("result").innerHTML = "Name:"+name+"\n usn"+usn;*/
+       document.body.style.backgroundColor = localStorage.getItem('color');
+
+
+
+    } else {
+        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+}
+</script>
+
+</head>
+<body>	
+	
+		<input  type="button" value="apply_color" onclick="foo()"/>
+	
+	<div id="result"></div>
+</body>
+</html>
